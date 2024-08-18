@@ -4,8 +4,7 @@ const bodyParser = require('body-parser');
 const openaiRoutes = require('./routes/openai/skills'); // Corrected path
 
 const app = express();
-const PORT = 8000;
-
+const PORT = process.env.PORT || 8000;
 // Middleware
 app.use(cors());
 app.use(bodyParser.json());
